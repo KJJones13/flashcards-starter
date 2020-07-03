@@ -11,7 +11,7 @@ describe('Round', function() {
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
     const deck = new Deck([card1, card2, card3]);
-    const round = new Round(deck)
+    const round = new Round(deck);
     expect(Round).to.be.a('function');
   });
 
@@ -20,7 +20,7 @@ describe('Round', function() {
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
     const deck = new Deck([card1, card2, card3]);
-    const round = new Round(deck)
+    const round = new Round(deck);
     expect(round).to.be.an.instanceof(Round);
   });
 
@@ -29,8 +29,8 @@ describe('Round', function() {
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
     const deck = new Deck([card1, card2, card3]);
-    const round = new Round(deck)
-    round.takeTurn('guess')
+    const round = new Round(deck);
+    round.takeTurn('guess');
     expect(round.turns).to.equal(1);
   });
 
@@ -39,7 +39,7 @@ describe('Round', function() {
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
     const deck = new Deck([card1, card2, card3]);
-    const round = new Round(deck)
+    const round = new Round(deck);
     round.takeTurn('guess');
     round.takeTurn('sea otter');
     expect(round.calculatePercentCorrect()).to.equal(50);

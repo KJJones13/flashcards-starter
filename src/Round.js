@@ -10,7 +10,7 @@ class Round {
     return this.deck.cards[0];
   }
   takeTurn(guess) {
-    this.turns++
+    this.turns++;
     let turn = new Turn(guess, this.deck.cards[0])
     if(turn.evaluateGuess() == true) {
       return turn.giveFeedBack();

@@ -1,3 +1,7 @@
+# Flash Cards
+
+Flash Cards is a game that users can play through the command line. They will be able to see the questions, take guesses, and see a final score at the end of the round.
+
 # FlashCards Starter Kit
 
 ## Fork This Repo
@@ -20,7 +24,7 @@ npm install
 
 To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
 
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
+Running `node index.js` from the root of your project should result in the following message being displayed in your terminal:
 
 ```bash
 Node server running on port 3000
@@ -74,6 +78,16 @@ The test results will output to the terminal.
 
 Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
 
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
+Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory.
 
 ---
+
+## Things That Held Me Back In This Project
+
+In the last two weeks I have had two friends pass away, which one of the funerals was this week. Also my house was broken into trashed and robbed. I have also been waiting over a month to get glasses from the VA and they still have not even set me up with an appointment yet. This is not the kind of work that I am happy to turn in.
+
+## Positive takeaways
+
+I learned how to write test for TDD.
+I got a lot accomplished in the small amount of time I had to dedicate to this project.
+I got exposed to using a linter.
