@@ -7,11 +7,11 @@ class Round {
     this.incorrectGuesses = [];
   }
   returnCurrentCard() {
-    return this.deck.cards[0];
+    return this.deck.cards[this.turns];
   }
   takeTurn(guess) {
+    let turn = new Turn(guess, this.deck.cards[this.turns])
     this.turns++;
-    let turn = new Turn(guess, this.deck.cards[0])
     if(turn.evaluateGuess() == true) {
       return turn.giveFeedBack();
     } else {

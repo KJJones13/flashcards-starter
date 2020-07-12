@@ -1,33 +1,30 @@
 const chai = require('chai');
 const expect = chai.expect;
-
 const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', function() {
+  let card;
 
+  beforeEach(function () {
+    card = new Card(1, 'What is Kyle\'s favorite animal',['whale', 'snake', 'wolf'], 'wolf');
+    turn = new Turn('wolf', card);
+
+  });
   it('should be a function', function() {
-    const card = new Card(1, 'What is Kyle\'s favorite animal',['whale', 'snake', 'wolf'], 'wolf');
-    const turn = new Turn('wolf', card);
     expect(Turn).to.be.a('function');
   });
 
   it('should be an instance of Turn', function() {
-    const card = new Card(1, 'What is Kyle\'s favorite animal',['whale', 'snake', 'wolf'], 'wolf');
-    const turn = new Turn('wolf', card);
     expect(turn).to.be.an.instanceof(Turn);
   });
 
   it('should have two arguments', function() {
-    const card = new Card(1, 'What is Kyle\'s favorite animal',['whale', 'snake', 'wolf'], 'wolf');
-    const turn = new Turn('wolf', card);
     let currentGuess = turn.returnGuess();
     expect(currentGuess).to.equal('wolf');
   });
 
   it('should have a method to return the card', function() {
-    const card = new Card(1,'What is Kyle\'s favorite animal',['whale', 'snake', 'wolf'], 'wolf');
-    const turn = new Turn('whale', card);
     let currentCard = turn.returnCard();
     expect(currentCard).to.equal(card);
   });
